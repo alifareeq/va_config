@@ -1,0 +1,21 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "va_config"                  # distribution (pip) name
+version = "0.1.0"
+description = "VA package: db, config, and utilities"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Ali Fareq" }]
+
+dependencies = [
+  "sqlalchemy>=2.0",
+  "geoalchemy2>=0.14",
+  "psycopg2-binary>=2.9",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/va_config"]        # ship the va_config package
